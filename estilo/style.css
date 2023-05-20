@@ -277,7 +277,7 @@ aside > ul {
 }
 
 footer {
-    background-image: linear-gradient(to bottom, var(--cor0), var(--cor1));
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor0), var(--cor3));
     color: var(--cor3);
     text-align: center;
     font-size: 1em;
@@ -296,7 +296,6 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--cor4);
 }
-
