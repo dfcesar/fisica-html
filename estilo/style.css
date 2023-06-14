@@ -127,13 +127,25 @@ header > img {
     margin: -80px 0px 0px 20px;
 }
 
-nav {
+span#burguer {
+    background-color: #FFFFFF;
+    color: var(--cor0);
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+span#burguer:hover {
+    color: var(--cor4);
+}
+
+menu {
     background-color: var(--cor3);
     box-shadow: 0px 7px 7px rgba(0, 0, 0, .4);
     padding: 10px;
 }
 
-nav > a {
+menu > a {
     padding: 10px;
     
     color: var(--cor0);
@@ -144,7 +156,7 @@ nav > a {
     transition-duration: .5s;
 }
 
-nav > a:hover {
+menu > a:hover {
     /*background-color: var(--cor0);*/
     color: var(--cor4);
 }
