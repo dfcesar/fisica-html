@@ -72,9 +72,9 @@ as pseudoclasses, definidas por : , são palavras que definem um estado de um el
 .Corporate-Orange-&-Blue-5-hsla { color: hsla(221, 37, 30, 1); }
 
 :root{
-    --cor0: #304269;
-    --cor1: #91BED4;
-    --cor2: #D9E8F5;
+    --cor0: #000000;
+    --cor1: #FFFF00;
+    --cor2: #00FF00;
     --cor3: #FFFFFF;
     --cor4: #F26101;
 
@@ -93,12 +93,12 @@ body {
 }
 
 a.externo::after{
-    content: '\00A0\1F517';
+    content: '\00A0\1F517'; /* simbolo de corrente que a aprece após qualquer link */
 }
 
 header {
     /*background-image: linear-gradient(to bottom, var(--cor3), var(--cor0), var(--cor3));*/
-    background-color: #000000;
+    background-color: var(--cor0);
     text-align: center;
     min-height: 150px;
     padding-top: 20px;
@@ -111,15 +111,15 @@ header > h1 {
     margin-top: 20px;
     font-size: 60px;
     font-weight: normal;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, .5);
+    text-shadow: 2px 2px 0px rgba(0, 255, 0, .3);
 }
 
 header > p {
-    color: var(--cor4);
+    color: var(--cor2);
     font-family: var(--fonte-titulo);
     font-size: 18px;
     margin: auto;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, .5);
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, .3);
 }
 
 header > img {
@@ -132,74 +132,359 @@ nav {
     font-family: var(--fonte-titulo);
 }
 
-nav > ul.menu {
+/* menu-principal */
+
+nav > ul.menu-principal {
     display:block;
     list-style: none;
-    background-color: var(--cor3);
+    background-color: var(--cor0);
     text-align: center;
 }
 
-nav > ul.menu > li {
+nav > ul.menu-principal > li {
     display:inline-block;
-    padding: 15px 15px;
+    padding: 0px 25px 25px 0px;
     text-align: center;
     position: relative;
-    background-color: var(--cor3);
+    /*background-color: var(--cor0);*/
 }
 
-nav > ul.menu > li > a {
+nav > ul.menu-principal > li > a {
     text-decoration: none;
-    color: var(--cor0);
+    color: var(--cor3);
     font-size: 18px;
     font-weight: normal;
     transition-duration: .5s;
     text-align: center;
 }
 
-nav > ul.menu > li > ul.sub-menu {
+/* sub-menu-1 */
+
+nav > ul.menu-principal > li > ul.sub-menu-1 {
+    text-align: left;
     text-decoration: none;
     list-style: none;
     position: absolute;
     display: none;
-    background-color: var(--cor3);
-    width: 200px;
-    
+    background-color: var(--cor0);
+    width: 117px;
+    border: 2px solid;
+    border-left-color: var(--cor2);
+    border-bottom-color: var(--cor2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-nav > ul.menu > li > ul.sub-menu > li {
+nav > ul.menu-principal > li > ul.sub-menu-1 > li {
     display: block;
 }
 
-nav > ul.menu > li > ul.sub-menu > li {
+nav > ul.menu-principal > li > ul.sub-menu-1 > li {
     text-decoration: none;
     list-style: none;
-    padding: 7px;
-    margin-left: -15px;
+    margin-left: -20px;
 }
 
-nav > ul.menu > li > ul.sub-menu > li > a {
+nav > ul.menu-principal > li > ul.sub-menu-1 > li > a {
     display: block;
     text-decoration: none;
-    color: var(--cor0);
+    color: var(--cor3);
     font-size: 14px;
     font-weight: normal;
     text-align: left;
+    width: 200px;
+    padding: 5px 0px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-1 > li > a:hover {
+    color: var(--cor2);
+}
+
+nav > ul.menu-principal > li:hover ul.sub-menu-1 {
+    display: block;
+}
+
+/* sub-menu-2*/
+
+nav > ul.menu-principal > li > ul.sub-menu-2 {
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    display: none;
+    background-color: var(--cor0);
+    width: 175px;
+    border: 2px solid;
+    border-left-color: var(--cor2);
+    border-bottom-color: var(--cor2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-2 > li {
+    display: block;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-2 > li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: -20px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-2 > li > a {
+    display: block;
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    width: 200px;
+    padding: 5px 0px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-2 > li > a:hover {
+    color: var(--cor2);
+}
+
+nav > ul.menu-principal > li:hover ul.sub-menu-2 {
+    display: block;
+}
+
+/* sub-menu-3 */
+
+nav > ul.menu-principal > li > ul.sub-menu-3 {
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    display: none;
+    background-color: var(--cor0);
+    width: 162px;
+    border: 2px solid;
+    border-left-color: var(--cor2);
+    border-bottom-color: var(--cor2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-3 > li {
+    display: block;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-3 > li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: -20px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-3 > li > a {
+    display: block;
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    width: 200px;
+    padding: 5px 0px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-3 > li > a:hover {
+    color: var(--cor2);
+}
+
+nav > ul.menu-principal > li:hover ul.sub-menu-3 {
+    display: block;
+}
+
+/* sub-menu-4 */
+
+nav > ul.menu-principal > li > ul.sub-menu-4 {
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    display: none;
+    background-color: var(--cor0);
+    width: 170px;
+    border: 2px solid;
+    border-left-color: var(--cor2);
+    border-bottom-color: var(--cor2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-4 > li {
+    display: block;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-4 > li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: -20px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-4 > li > a {
+    display: block;
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    width: 200px;
+    padding: 5px 0px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-4 > li > a:hover {
+    color: var(--cor2);
+}
+
+nav > ul.menu-principal > li:hover ul.sub-menu-4 {
+    display: block;
+}
+
+/* sub-menu-5 */
+
+nav > ul.menu-principal > li > ul.sub-menu-5 {
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    display: none;
+    background-color: var(--cor0);
+    width: 172px;
+    border: 2px solid;
+    border-left-color: var(--cor2);
+    border-bottom-color: var(--cor2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-5 > li {
+    display: block;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-5 > li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: -20px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-5 > li > a {
+    display: block;
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    width: 200px;
+    padding: 5px 0px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-5 > li > a:hover {
+    color: var(--cor2);
+}
+
+nav > ul.menu-principal > li:hover ul.sub-menu-5 {
+    display: block;
+}
+
+/* sub-menu-6 */
+
+nav > ul.menu-principal > li > ul.sub-menu-6 {
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    display: none;
+    background-color: var(--cor0);
     width: 190px;
+    border: 2px solid;
+    border-left-color: var(--cor2);
+    border-bottom-color: var(--cor2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-nav > ul.menu > li > ul.sub-menu > li > a:hover {
-    background-color: var(--cor3);
-    color: var(--cor4);
+nav > ul.menu-principal > li > ul.sub-menu-6 > li {
+    display: block;
 }
 
-nav > ul.menu > li:hover ul.sub-menu {
+nav > ul.menu-principal > li > ul.sub-menu-6 > li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: -20px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-6 > li > a {
+    display: block;
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    width: 200px;
+    padding: 5px 0px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-6 > li > a:hover {
+    color: var(--cor2);
+}
+
+nav > ul.menu-principal > li:hover ul.sub-menu-6 {
+    display: block;
+}
+
+/* sub-menu-7 */
+
+nav > ul.menu-principal > li > ul.sub-menu-7 {
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    display: none;
+    background-color: var(--cor0);
+    width: 126px;
+    border: 2px solid;
+    border-left-color: var(--cor2);
+    border-bottom-color: var(--cor2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-7 > li {
+    display: block;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-7 > li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: -20px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-7 > li > a {
+    display: block;
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    width: 200px;
+    padding: 5px 0px;
+}
+
+nav > ul.menu-principal > li > ul.sub-menu-7 > li > a:hover {
+    color: var(--cor2);
+}
+
+nav > ul.menu-principal > li:hover ul.sub-menu-7 {
     display: block;
 }
 
 main {
     background-color: var(--cor3);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
+    /*border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;*/
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
     min-width: 300px;
@@ -213,6 +498,14 @@ main p {
     text-indent: 30px;
     line-height: 1.5em;
     font-size: 1.25em;
+}
+
+main p.equacao {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+    font-size: 1.5em;
 }
 
 main strong {
@@ -229,7 +522,7 @@ main a {
 
 main a:hover {
     text-decoration: underline;
-    color: var(--cor4);
+    color: var(--cor2);
 }
 
 ul {
@@ -238,29 +531,42 @@ ul {
     padding-left: 20px;
 }
 
+ul.metodo-cientifico {
+    line-height: 1.5em;
+    list-style-position: outside;
+    padding-left: 20px;
+    columns: 2;
+    font-size: 20px;
+}
+
 li {
     text-align: justify;
 }
+hr {
+    border-color: var(--cor2);
+}
+
 main h1 {
-    color: var(--cor3);
+    color: var(--cor0);
     font-family: 'Nunito Sans';
     font-size: 2em;
     font-weight: bolder;
     text-align: center;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, .2);
-    background-image: linear-gradient(to right, transparent, var(--cor0), transparent);
-    padding: 10px 0px 10px 10px;
-    
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, .2);
+    /*background-image: linear-gradient(to right, var(--cor2), transparent);*/
+    box-shadow: rgba(0, 0, 0, .5);
 }
 
 main h2 {
-    color: var(--cor3);
+    margin-top: 10px;
+    color: var(--cor0);
     font-family: 'Nunito Sans';
     font-size: 1.3em;
     font-weight: bolder;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, .2);
-    background-image: linear-gradient(to right, var(--cor0), transparent);
-    padding: 10px 0px 10px 10px;
+    text-align: left;
+    text-shadow: 2px 2px 0px rgba(255, 255, 0, .2);
+    /*background-image: linear-gradient(to right, var(--cor0), transparent);*/
+    box-shadow: rgba(0, 0, 0, .5);
 }
 
 /*main h3 {
@@ -276,7 +582,6 @@ main h2 {
 
 main img {
     width: 100%;
-
     /*para centralizar uma imagem
         display: block;
         margin: auto;
@@ -284,11 +589,12 @@ main img {
 }
 
 div.video {
-    background-color: var(--cor1);
+    background-color: var(--cor0);
     margin: 0px -20px 30px -20px;
     padding: 20px;
     padding-bottom: 57%;
     position: relative;
+    border: 10px solid var(--cor3);
 }
 
 div.video > iframe {
@@ -300,17 +606,17 @@ div.video > iframe {
 }
 
 aside {
-    background-color: var(--cor0);
+    background-color: var(--cor3);
     padding: 10px;
     margin: auto;
     border-radius: 10px;
-    color: var(--cor3);
+    color: var(--cor0);
     box-shadow: 3px 3px 8px rgba(0, 0, 0, .5);
 
 }
 
 aside > h3 {
-    background-color: var(--cor4);
+    background-color: var(--cor0);
     color: var(--cor3);
     padding: 10px;
     margin: -10px -10px 0px -10px;
@@ -325,7 +631,8 @@ aside > ul {
 }
 
 footer {
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor0), var(--cor3));
+    /*background-image: linear-gradient(to bottom, var(--cor3), var(--cor0), var(--cor3));*/
+    background-color: var(--cor0);
     color: var(--cor3);
     text-align: center;
     font-size: 1em;
@@ -339,11 +646,11 @@ footer p {
 footer a {
     text-decoration: none;
     font-weight: bold;
-    color: var(--cor0);
+    color: var(--cor3);
     padding: 4px 4px;
 }
 
 footer a:hover {
     text-decoration: none;
-    color: var(--cor4);
+    color: var(--cor2);
 }
