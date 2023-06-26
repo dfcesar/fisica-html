@@ -663,3 +663,15 @@ footer a:hover {
 footer img {
     width: 25px;
 }
+
+/* configurações que funcionam apenas em telas em modo portrait */
+
+@media screen and (orientation: portrait) {
+    
+}
+
+/* configurações que funcionam apenas em telas em modo landscape */
+
+@media screen and (orientation: landscape) {
+    
+}
